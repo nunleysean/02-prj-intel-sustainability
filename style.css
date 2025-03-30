@@ -1,1 +1,93 @@
-/* Add your CSS here */
+/* Import Intel fonts */
+@font-face {
+  font-family: 'Intel One';
+  src: url('path-to-intel-one-font.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Intel Clear';
+  src: url('path-to-intel-clear-font.woff2') format('woff2');
+}
+
+/* General styles */
+body {
+  font-family: 'Intel Clear', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background-color: #0068B5; /* Intel blue */
+  color: #FFFFFF;
+  padding: 2rem;
+}
+.hero-logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+.hero-title {
+  font-family: 'Intel One', sans-serif;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.hero-description {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Timeline Section */
+.timeline {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #F5F5F5;
+}
+.timeline-card {
+  flex: 0 0 300px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.timeline-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.timeline-card p {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.timeline-card:hover p {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem;
+  }
+  .hero-title {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+  .hero-description {
+    font-size: 0.9rem; /* Adjust description font size */
+  }
+  .timeline {
+    flex-direction: column; /* Stack cards vertically */
+    overflow-y: auto; /* Enable vertical scrolling */
+    gap: 1.5rem; /* Increase gap between cards for better spacing */
+  }
+  .timeline-card {
+    flex: 1 1 auto; /* Allow cards to adjust height */
+    padding: 1rem; /* Ensure consistent padding */
+  }
+  .timeline-card img {
+    width: 100%; /* Make images scale to fit the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Match card border radius for a cohesive look */
+  }
+}
