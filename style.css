@@ -39,7 +39,7 @@ body {
 /* Timeline Section */
 .timeline {
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   gap: 1rem;
   padding: 1rem;
   background-color: #F5F5F5;
